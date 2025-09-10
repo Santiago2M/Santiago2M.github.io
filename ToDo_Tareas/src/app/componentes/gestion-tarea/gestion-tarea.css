@@ -1,0 +1,144 @@
+/* Tarjeta principal estilo corporativo */
+.task-card-compact {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #dbe3ea;
+  padding: 20px;
+  margin: 18px 0;
+  border: 1px solid #e3eafc;
+}
+
+.task-card-compact:hover {
+  box-shadow: 0 6px 24px rgba(44, 62, 80, 0.13);
+  transform: translateY(-2px) scale(1.01);
+}
+
+/* Encabezado */
+.task-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.task-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #22304a;
+  margin: 0;
+}
+
+/* Estado */
+.status-badge {
+  border-radius: 12px;
+  padding: 5px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: #eaf1fb;
+  color: #2980ef;
+  border: none;
+}
+
+.status-SinIniciar {
+  background: #f5f6fa;
+  color: #b2bec3;
+}
+.status-EnProgreso {
+  background: #eaf1fb;
+  color: #2980ef;
+}
+.status-Completada {
+  background: #e6f9f0;
+  color: #27ae60;
+}
+
+/* Descripción */
+.task-description {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #d6e0ef;
+  padding: 8px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  background: #fff;
+  color: #22304a;
+}
+
+.task-description:focus {
+  border: 1.5px solid #2980ef;
+  outline: none;
+}
+
+/* Metadatos */
+.task-meta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #7b8a99;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fecha-fin {
+  gap: 8px;
+}
+
+.fecha-input {
+  border: 1px solid #d6e0ef;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 1rem;
+  background: #fff;
+  color: #22304a;
+}
+
+.fecha-input:focus {
+  border: 1.5px solid #2980ef;
+  outline: none;
+}
+
+/* Botones */
+.task-content button {
+  background: #2980ef;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 8px;
+  margin-top: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.task-content button:last-child {
+  background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.task-content button:hover,
+.task-content button:focus {
+  background: #22304a;
+}
+
+.task-content button:active {
+  transform: scale(0.97);
+  opacity: 0.92;
+}
+
+.task-title-input {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #22304a;
+  border: 1px solid #d6e0ef;
+  border-radius: 6px;
+  padding: 6px 10px;
+  background: #fff;
+  outline: none;
+  width: 70%;
+}

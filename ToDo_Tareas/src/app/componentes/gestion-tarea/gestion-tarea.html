@@ -1,0 +1,56 @@
+<div class="task-card-compact">
+  <div class="task-header">
+    @if (editandoTitulo()) {
+      <input 
+        [ngModel]="nuevoTitulo()" 
+        (ngModelChange)="nuevoTitulo.set($event)" 
+        class="task-title-input" />
+    } @else {
+      <h3 class="task-title">{{ tarea().titulo }}</h3>
+    }
+
+    <select 
+      [ngModel]="tarea().estado" 
+      (ngModelChange)="actualizarEstado($event)"
+      class="status-badge" 
+      [class]="'status-' + tarea().estado.replace(' ', '-').toLowerCase()">
+      @for (estado of estados; track $index) {
+        <option [value]="estado">{{estado}}</option>
+      }
+    </select>
+  </div>
+  
+  <div class="task-content">
+    <textarea 
+      [ngModel]="tarea().descripcion" 
+      (ngModelChange)="actualizarDescripcion($event)"
+      class="task-description"
+      rows="2"
+      placeholder="Descripción de la tarea...">
+    </textarea>
+
+    <div class="task-meta">
+      <span class="meta-item">📅 {{ tarea().fechaInicio | date:'dd/MM' }}</span>
+      <div class="meta-item fecha-fin">
+        <span>🏁</span>
+        <input 
+          type="date" 
+          [ngModel]="tarea().fechaFin"
+          (ngModelChange)="actualizarFechaFin($event)"
+          class="fecha-input">
+      </div>
+    </div>
+
+    <div>
+      <button (click)="editarTarea()">
+        {{ editandoTitulo() ? 'GUARDAR' : 'MODIFICAR' }}
+      </button>
+
+      @if (editandoTitulo()) {
+        <button (click)="cancelarEdicion()">CANCELAR</button>
+      }
+
+      <button (click)="eliminarTarea()">ELIMINAR</button>
+    </div>
+  </div>
+</div>

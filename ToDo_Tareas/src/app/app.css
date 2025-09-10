@@ -1,0 +1,23 @@
+.app-container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #dbe3ea;
+  border: 1px solid #e3eafc;
+}
+
+.app-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #22304a;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e3eafc;
+  margin: 18px 0;
+}

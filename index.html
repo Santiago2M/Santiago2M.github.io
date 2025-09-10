@@ -143,28 +143,13 @@
   <footer>
 
   <div style="text-align:center; margin: 2rem 0;">
-  <button id="btnProyectos" style="padding: 15px 30px; font-size: 18px; border-radius: 8px; border: none; background: #0078d7; color: white; cursor: pointer;">🇪🇸 Proyectos</button>
+    <a href="proyectos.html"><button style="padding: 15px 30px; font-size: 18px; border-radius: 8px; border: none; background: #0078d7; color: white; cursor: pointer;"> Proyectos</button></a>
   </div>
 
-  <!-- Modal -->
-  <div id="modalProyectos" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); justify-content:center; align-items:center; z-index:1000;">
-    <div style="background:white; padding:2rem; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.2); text-align:center; min-width:300px;">
-      <h2>Proyectos</h2>
-      <button onclick="window.open('Juego Ahorcado/index.html', '_blank')" style="margin:10px; padding:15px 30px; font-size:18px; border-radius:8px; border:none; background:#0078d7; color:white; cursor:pointer;">Juego Ahorcado</button>
-      <button onclick="window.open('Tabla Ascii/index.html', '_blank')" style="margin:10px; padding:15px 30px; font-size:18px; border-radius:8px; border:none; background:#0078d7; color:white; cursor:pointer;">Tabla Ascii</button>
-      <br>
-      <button onclick="document.getElementById('modalProyectos').style.display='none'" style="margin-top:20px; padding:10px 20px; font-size:16px; border-radius:8px; border:none; background:#ccc; color:#333; cursor:pointer;">Cerrar</button>
-    </div>
-  </div>
+  <!-- Modal de proyectos eliminado, ahora el botón redirige a proyectos.html -->
 
   <script>
-    document.getElementById('btnProyectos').onclick = function() {
-      document.getElementById('modalProyectos').style.display = 'flex';
-    };
-    // Permitir cerrar el modal haciendo clic fuera del contenido
-    document.getElementById('modalProyectos').onclick = function(e) {
-      if (e.target === this) this.style.display = 'none';
-    };
+  // Modal de proyectos eliminado, no se requiere JS para el botón de proyectos
   </script>
   <footer>
     ✨ Gracias por visitar mi perfil. ¡Explora mis proyectos y colaboremos en el mundo de los datos!

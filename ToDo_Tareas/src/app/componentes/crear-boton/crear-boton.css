@@ -1,0 +1,59 @@
+/* Estilo para el botón principal */
+.crear-boton {
+  background: #2980ef;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  outline: none;
+  letter-spacing: 1px;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+/* Efecto hover */
+.crear-boton:hover,
+.crear-boton:focus {
+  background: #22304a;
+}
+
+/* Efecto activo */
+.crear-boton:active {
+  background: #ffe066;
+  box-shadow: 0 2px 8px rgba(255, 224, 102, 0.12);
+  transform: scale(0.98);
+}
+
+/* Icono dentro del botón (opcional) */
+.crear-boton .icono {
+  margin-right: 8px;
+  vertical-align: middle;
+  font-size: 1.2em;
+}
+
+/* Accesibilidad: foco visible */
+.crear-boton:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+
+/* Input de tarea */
+.form-control {
+  border-radius: 6px;
+  border: 1px solid #d6e0ef;
+  padding: 8px 12px;
+  font-size: 1rem;
+  margin-top: 8px;
+  background: #fff;
+  color: #22304a;
+  transition: border 0.2s;
+}
+
+.form-control:focus {
+  border: 1.5px solid #2980ef;
+  outline: none;
+}

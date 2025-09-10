@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Persona</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="personas-servicio.js"></script>
+    <script src="editar-persona.js"></script>
+  </head>
+  <body class="form-body">
+    <h1 id="titulo">Agregar Persona</h1>
+    
+    <form id="formPersona">
+        <input type="hidden" id="personaId" value="">
+        
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+        </div>
+        <div class="btn-container">
+            <button type="submit" class="btn btn-guardar">Guardar</button>
+            <button type="button" onclick="cancelar()" class="btn btn-cancelar">Cancelar</button>
+            <button type="button" onclick="volverATabla()" class="btn btn-volver">Volver a la Tabla</button>
+        </div>
+    </form>
+</body>
+</html>

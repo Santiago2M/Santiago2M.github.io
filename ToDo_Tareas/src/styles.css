@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Fuente y fondo global */
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(120deg, #e3eafc 0%, #f8fbff 100%);
+  margin: 0;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e3eafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #4f8cff;
+  border-radius: 8px;
+}

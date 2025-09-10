@@ -1,0 +1,7 @@
+<app-crear-boton (tareaCreada)="guardarTarea($event)"></app-crear-boton>
+
+@for(tarea of tareasOrdenadas(); track tarea.id) {
+  <app-gestion-tarea [tarea]="tarea" (eliminar)="eliminarTarea($event)" 
+  (editar)="editarTarea($event)"
+    ></app-gestion-tarea>
+}
