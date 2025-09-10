@@ -16,14 +16,50 @@
       background-color: #24292e;
       color: white;
       text-align: center;
-
       padding: 2rem;
-      background: white;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+    section {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      margin: 2rem auto;
+      padding: 2rem 2.5rem;
+      max-width: 650px;
+      border-left: 8px solid #0078d7;
+      transition: box-shadow 0.2s;
+    }
+    section:hover {
+      box-shadow: 0 8px 32px rgba(0,120,215,0.15);
+    }
+    section h2 {
+      color: #0078d7;
+      margin-top: 0;
+      margin-bottom: 1.2rem;
+      font-size: 1.5rem;
+    }
+    section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    section ul li {
+      margin-bottom: 0.7rem;
+      padding-left: 1.2em;
+      position: relative;
+    }
+    section ul li::before {
+      content: "✔️ ";
+      position: absolute;
+      left: 0;
+    }
+    .contact a {
+      color: #0078d7;
+      text-decoration: underline;
+      font-weight: bold;
+    }
     h2 {
-      color: #0366d6;
+      color: #fff;
       margin-bottom: 1rem;
     }
     ul {
@@ -34,7 +70,7 @@
       content: "✔️ ";
     }
     .contact a {
-      color: #0366d6;
+      color: #ffe600;
       text-decoration: none;
     }
     .stats img {
@@ -48,6 +84,7 @@
       color: white;
       margin-top: 2rem;
     }
+    }
   </style>
 </head>
 <body>
@@ -56,6 +93,7 @@
     <h1>👋 ¡Hola! Soy Santiago Martínez Ortiz</h1>
     <p>Data Analytics | Data Science | SQL | Python | Power BI | JavaScript | HTML</p>
   </header>
+
 
   <section>
     <h2>🚀 Sobre mí</h2>
@@ -94,7 +132,7 @@
     <ul>
       <li>Operativa de caja, gestión documental y productos financieros.</li>
     </ul>
-  
+  </section>
 
   <section class="contact">
     <h2>🌐 Conecta conmigo</h2>
@@ -104,11 +142,30 @@
 
   <footer>
 
-  <section style="text-align:center; margin: 2rem 0;">
-    <h2>🎮 Juegos Interactivos</h2>
-    <button onclick="window.open('Juego Ahorcado/index.html', '_blank')">Juego Ahorcado</button>
-    <button onclick="window.open('Tabla Ascii/index.html', '_blank')">Tabla Ascii</button>
-  </section>
+  <div style="text-align:center; margin: 2rem 0;">
+  <button id="btnProyectos" style="padding: 15px 30px; font-size: 18px; border-radius: 8px; border: none; background: #0078d7; color: white; cursor: pointer;">🇪🇸 Proyectos</button>
+  </div>
+
+  <!-- Modal -->
+  <div id="modalProyectos" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); justify-content:center; align-items:center; z-index:1000;">
+    <div style="background:white; padding:2rem; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.2); text-align:center; min-width:300px;">
+      <h2>Proyectos</h2>
+      <button onclick="window.open('Juego Ahorcado/index.html', '_blank')" style="margin:10px; padding:15px 30px; font-size:18px; border-radius:8px; border:none; background:#0078d7; color:white; cursor:pointer;">Juego Ahorcado</button>
+      <button onclick="window.open('Tabla Ascii/index.html', '_blank')" style="margin:10px; padding:15px 30px; font-size:18px; border-radius:8px; border:none; background:#0078d7; color:white; cursor:pointer;">Tabla Ascii</button>
+      <br>
+      <button onclick="document.getElementById('modalProyectos').style.display='none'" style="margin-top:20px; padding:10px 20px; font-size:16px; border-radius:8px; border:none; background:#ccc; color:#333; cursor:pointer;">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('btnProyectos').onclick = function() {
+      document.getElementById('modalProyectos').style.display = 'flex';
+    };
+    // Permitir cerrar el modal haciendo clic fuera del contenido
+    document.getElementById('modalProyectos').onclick = function(e) {
+      if (e.target === this) this.style.display = 'none';
+    };
+  </script>
   <footer>
     ✨ Gracias por visitar mi perfil. ¡Explora mis proyectos y colaboremos en el mundo de los datos!
   </footer>
