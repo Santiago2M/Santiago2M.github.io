@@ -1,3 +1,11 @@
+/* Contenedor centrado para el botón de Proyectos */
+.proyectos-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+  width: 100%;
+}
 /* Frase motivacional al final */
 .frase-final {
   background: #fff;
@@ -124,14 +132,14 @@ footer {
   100% { transform: scale(1); }
 }
 .section-btn {
-  width: 320px;
-  padding: 2.5rem;
+  width: 180px;
+  padding: 1.2rem;
   background: #0078d7;
   color: white;
   border: none;
-  border-radius: 18px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
-  font-size: 1.25rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  font-size: 1rem;
   text-align: center;
   cursor: pointer;
   transition: background 0.2s;

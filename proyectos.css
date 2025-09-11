@@ -1,3 +1,38 @@
+/* Botón volver al inicio igual que los botones principales */
+.volver-inicio {
+    display: block;
+    margin: 4rem auto 0 auto;
+    text-align: center;
+}
+.volver-inicio button {
+    width: 180px;
+    padding: 1.2rem;
+    background: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.volver-inicio button:hover {
+    background: #005fa3;
+    animation: bounce 0.5s;
+}
+@keyframes bounce {
+    0%   { transform: scale(1); }
+    30%  { transform: scale(1.12); }
+    50%  { transform: scale(0.98); }
+    70%  { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f6f9;
@@ -14,9 +49,8 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 .proyectos-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin: 2rem auto;
     max-width: 1200px;
@@ -24,19 +58,34 @@ header {
 
 .volver-inicio {
     display: block;
-    margin: 4rem auto 0 auto;
-    text-align: center;
-}
-.proyecto-card {
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    padding: 2rem 2.5rem;
-    width: 340px;
-    border-left: 8px solid #0078d7;
-    transition: box-shadow 0.2s;
-    display: flex;
-    flex-direction: column;
+    .proyecto-card button {
+        width: 180px;
+        padding: 1.2rem;
+        background: #0078d7;
+        color: white;
+        border: none;
+        border-radius: 14px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        font-size: 1rem;
+        text-align: center;
+        cursor: pointer;
+        transition: background 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .proyecto-card button:hover {
+        background: #005fa3;
+        animation: bounce 0.5s;
+    }
+    /* Animación bounce igual que estilos.css */
+    @keyframes bounce {
+        0%   { transform: scale(1); }
+        30%  { transform: scale(1.12); }
+        50%  { transform: scale(0.98); }
+        70%  { transform: scale(1.08); }
+        100% { transform: scale(1); }
+    }
     align-items: center;
 }
 .proyecto-card:hover {
