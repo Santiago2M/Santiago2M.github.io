@@ -21,6 +21,12 @@ header {
     margin: 2rem auto;
     max-width: 1200px;
 }
+
+.volver-inicio {
+    display: block;
+    margin: 4rem auto 0 auto;
+    text-align: center;
+}
 .proyecto-card {
     background: #fff;
     border-radius: 14px;
