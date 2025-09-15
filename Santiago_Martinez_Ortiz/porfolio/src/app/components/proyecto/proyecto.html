@@ -1,0 +1,17 @@
+<!-- Template vacío para ProyectoComponent --><article class="proyecto">
+
+<div>  <img class="foto-proyecto" ngSrc="{{ proyecto().fotoUrl }}" width="600" height="400" alt="Imagen del proyecto" />
+
+  <!-- Aquí puedes mostrar información del proyecto -->  <div class="info-proyecto">
+
+</div>    <h3>{{ proyecto().nombre }}</h3>
+
+    <p>{{ proyecto().descripcion }}</p>
+    <div class="tecnologias">
+      @for (tech of proyecto().tecnologias; track tech) {
+        <span class="tech">{{ tech }}</span>
+      }
+    </div>
+    <a class="repo-link" [href]="proyecto().repoUrl" target="_blank">Ver repositorio</a>
+  </div>
+</article>
