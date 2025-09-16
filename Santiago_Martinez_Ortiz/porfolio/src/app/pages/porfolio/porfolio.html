@@ -1,8 +1,23 @@
+
+
 <section class="porfolio">
   <h2>Mis proyectos</h2>
-  <div class="lista-proyectos">
-    @for (proyecto of proyectos; track proyecto.nombre) {
-      <proyecto-root [proyecto]="proyecto"></proyecto-root>
-    }
+  <div class="proyectos-grid">
+    <div class="columna">
+      <h3>Proyectos Angular</h3>
+      <div class="lista-proyectos">
+        @for (proyecto of proyectosAngular; track proyecto.nombre) {
+          <proyecto-root [proyecto]="proyecto"></proyecto-root>
+        }
+      </div>
+    </div>
+    <div class="columna">
+      <h3>Otros proyectos</h3>
+      <div class="lista-proyectos">
+        @for (proyecto of proyectosOtros; track proyecto.nombre) {
+          <proyecto-root [proyecto]="proyecto"></proyecto-root>
+        }
+      </div>
+    </div>
   </div>
 </section>

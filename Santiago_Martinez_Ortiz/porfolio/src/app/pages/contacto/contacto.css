@@ -1,15 +1,15 @@
   .contacto {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(100,116,139,0.08);
-    padding: 2rem;
-    max-width: 500px;
-    margin: 4rem auto 2rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 60vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+  padding: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* min-height eliminado para que no quede pegado abajo */
   }
 .contacto h2 {
   color: #1e293b;

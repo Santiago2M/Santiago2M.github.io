@@ -19,10 +19,10 @@
 .foto {
   width: 70px;
   height: 70px;
+  margin-right: 1.5rem;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #64748b;
-  margin-right: 1.5rem;
 }
 .info {
   flex: 1;

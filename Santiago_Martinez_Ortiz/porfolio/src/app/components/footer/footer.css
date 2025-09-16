@@ -4,12 +4,10 @@
   left: 0;
   width: 100%;
   box-sizing: border-box;
-  background: #fff;
   color: #1e293b;
   padding: 1rem;
   z-index: 1000;
-  box-shadow: 0 -2px 12px rgba(100,116,139,0.08);
-  border-top: 2px solid #e0e0e0;
+  /* Sin box-shadow, sin fondo y sin borde superior */
 }
 .footer .wrap {
   max-width: 900px;
@@ -22,7 +20,7 @@
   gap: 1.2rem;
   font-size: 1rem;
   margin-bottom: 0.7rem;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .correo-link {
   color: #1e293b;

@@ -15,10 +15,20 @@
   flex-direction: column;
   gap: 2rem;
 }
+  
+.columna:last-child .lista-proyectos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
 @media (min-width: 700px) {
   .lista-proyectos {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .columna:last-child .lista-proyectos {
+    grid-template-columns: 1fr;
   }
 }
 .proyecto {

@@ -17,7 +17,8 @@ export class CabeceraComponent {
   protected readonly secciones = [
     { nombre: 'Sobre mí', id: 'sobremi' },
     { nombre: 'Formación y Experiencia', id: 'formacionyexperiencia' },
-    { nombre: 'Porfolio', id: 'porfolio' }
+    { nombre: 'Porfolio', id: 'porfolio' },
+    { nombre: 'Contacto', id: 'contacto' }
   ];
   constructor(public sectionService: AppSectionService) {}
 
