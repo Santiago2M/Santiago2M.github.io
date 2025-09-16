@@ -1,0 +1,10 @@
+
+<input type="text" maxlength="1" 
+      (input)="enviarLetra($event.target.value)" 
+      placeholder="Introduce una letra" />
+
+<app-texto-ahorcado 
+  [palabra]="'antaño'" 
+  [letraSignal]="letraSignal()"
+  (estadoCambio)="estadoCambiado($event)">
+</app-texto-ahorcado>

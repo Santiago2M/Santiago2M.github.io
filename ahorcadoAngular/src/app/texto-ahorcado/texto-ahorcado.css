@@ -1,0 +1,12 @@
+.enlinea {
+	display: inline-block;
+}
+
+.grande {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.margen {
+  padding: 10px;
+}

@@ -1,0 +1,10 @@
+
+<div>
+  @for(letra of palabra(); track $index){
+    @if(estaLetraAcertada(letra)) {
+    <div class="enlinea grande margen">{{letra}}</div>
+    } @else {
+    <div class="enlinea grande margen">_</div>
+    }
+  }
+</div>
