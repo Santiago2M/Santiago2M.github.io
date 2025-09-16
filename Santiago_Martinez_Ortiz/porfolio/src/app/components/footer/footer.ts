@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { AppSectionService } from '../../services/app-section.service';
 
 @Component({
   selector: 'footer-root',
@@ -10,4 +11,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     'class': 'footer-fixed'
   }
 })
-export class FooterComponent {}
+export class FooterComponent {
+  constructor(private sectionService: AppSectionService) {}
+  irAContacto(event: Event) {
+    event.preventDefault();
+    this.sectionService.cambiarSeccion('contacto');
+  }
+}

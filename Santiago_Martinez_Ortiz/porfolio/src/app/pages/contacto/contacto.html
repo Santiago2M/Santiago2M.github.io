@@ -1,0 +1,36 @@
+  <!-- Modal eliminado, solo formulario original -->
+
+<section class="contacto">
+  <div class="form-card">
+    <h2>Contacto</h2>
+    <p class="sub">¿Tienes alguna consulta o propuesta? Completa el formulario y te responderé lo antes posible.</p>
+    <form [formGroup]="form" (ngSubmit)="enviar()">
+      <div class="form-row">
+        <label for="nombre"><span class="icon">👤</span> Nombre</label>
+        <input id="nombre" formControlName="nombre" type="text" placeholder="Tu nombre completo" />
+        @if (form.get('nombre')?.invalid && form.get('nombre')?.touched) {
+          <div class="error">Nombre requerido (mínimo 3 caracteres)</div>
+        }
+      </div>
+      <div class="form-row">
+        <label for="email"><span class="icon">✉️</span> Email</label>
+        <input id="email" formControlName="email" type="email" placeholder="ejemplo@email.com" />
+        @if (form.get('email')?.invalid && form.get('email')?.touched) {
+          <div class="error">Email válido requerido</div>
+        }
+      </div>
+      
+      <div class="form-row">
+        <label for="mensaje"><span class="icon">📝</span> Mensaje</label>
+        <textarea id="mensaje" formControlName="mensaje" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+        @if (form.get('mensaje')?.invalid && form.get('mensaje')?.touched) {
+          <div class="error">Mensaje requerido (mínimo 10 caracteres)</div>
+        }
+      </div>
+      <button type="submit" [disabled]="form.invalid" class="btn-enviar">Enviar mensaje</button>
+      @if (enviado) {
+        <div class="exito">¡Tu mensaje ha sido enviado correctamente!</div>
+      }
+    </form>
+  </div>
+</section>

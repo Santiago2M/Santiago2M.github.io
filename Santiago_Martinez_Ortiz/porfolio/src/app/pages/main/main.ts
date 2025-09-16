@@ -4,13 +4,14 @@ import { AppSectionService } from '../../services/app-section.service';
 import { SobreMiComponent } from '../sobremi/sobremi';
 import { FormacionYExperienciaComponent } from '../habilidades/habilidades';
 import { PorfolioComponent } from '../porfolio/porfolio';
+import { ContactoComponent } from '../contacto/contacto';
 
 @Component({
   selector: 'main-root',
   templateUrl: './main.html',
   styleUrls: ['./main.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, SobreMiComponent, FormacionYExperienciaComponent, PorfolioComponent],
+  imports: [CommonModule, SobreMiComponent, FormacionYExperienciaComponent, PorfolioComponent, ContactoComponent],
   standalone: true
 })
 export class MainComponent {
