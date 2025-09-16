@@ -1,0 +1,15 @@
+<article class="proyecto">
+  <img class="foto-proyecto" ngSrc="{{ proyecto().fotoUrl }}" width="220" height="140" alt="Imagen del proyecto" />
+  <div class="info-proyecto">
+    <h3>{{ proyecto().nombre }}</h3>
+    <p>{{ proyecto().descripcion }}</p>
+    <div class="tecnologias">
+      @for (tech of proyecto().tecnologias; track tech) {
+        <span class="tech">{{ tech }}</span>
+      }
+    </div>
+    <div class="enlaces-proyecto">
+      <a class="repo-link" [href]="proyecto().repoUrl.replace('github.com/Santiago2M/Santiago2M.github.io/tree/main/', 'santiago2m.github.io/')" target="_blank">Ver proyecto</a>
+    </div>
+  </div>
+</article>
